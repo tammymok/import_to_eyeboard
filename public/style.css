@@ -1,0 +1,54 @@
+html {
+    height: 100%
+}
+
+body { 
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font: 13px Helvetica, Arial; 
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+#canvas {
+    background-color: cadetblue;
+    width: 80%;
+}
+
+#chatbox {
+    background-color: antiquewhite;
+    width: 5%;
+}
+
+form { 
+    background: #111111;
+    bottom: 0;
+    display: flex;
+}
+form input {
+    width: 90%;
+    border: 0;
+}
+form button { 
+    background: rgb(130, 224, 255);
+    width: 10%;
+    right: 0;
+}
+#messages {
+    margin: auto;
+    text-align: right;
+    list-style: none;
+}
+#messages-div {
+    background-color: #cccccc;
+}
+
+#messages li:nth-child(odd) {
+    background: #eee;
+}
