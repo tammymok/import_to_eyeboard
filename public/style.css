@@ -1,5 +1,6 @@
 html {
-    height: 100%
+    height: 100%;
+    width: 100%;
 }
 
 body { 
@@ -7,12 +8,13 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
-    font: 13px Helvetica, Arial; 
+    font: 13px Helvetica, Arial;
+    display: flex;
 }
 
 #container {
     height: 100%;
-    width: 100%;
+    width: 50%;
     display: flex;
 }
 
@@ -23,8 +25,9 @@ body {
 
 #chatbox {
     background-color: antiquewhite;
-    width: 5%;
+    width: 100%;
 }
+
 
 form { 
     background: #111111;

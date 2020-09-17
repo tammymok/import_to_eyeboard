@@ -6,7 +6,8 @@
 var socket;
 var size = 10;
 function setup() {
-  createCanvas(400, 400);
+  cnv = createCanvas(400, 400);
+  cnv.position(0, 0);
   background(0);
   // Start a socket connection to the server
   // Some day we would run this server somewhere else
