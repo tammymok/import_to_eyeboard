@@ -3,7 +3,7 @@
 // Daniel Shiffman
 
 // Keep track of our socket connection
-var socket;
+var socket = io();
 var size = 10;
 function setup() {
   cnv = createCanvas(600, 600);
@@ -12,7 +12,7 @@ function setup() {
   // Start a socket connection to the server
   // Some day we would run this server somewhere else
   //socket = io.connect('http://localhost:3000');
-  socket = io.connect('https://eyeboard.herokuapp.com/');
+  //socket = io.connect('https://eyeboard.herokuapp.com/');
 
   // We make a named event called 'mouse' and write an
   // anonymous callback function
