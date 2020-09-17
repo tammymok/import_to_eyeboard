@@ -11,10 +11,14 @@ body {
     font: 13px Helvetica, Arial;
     display: flex;
 }
-
-#container {
+#canvas_container {
     height: 100%;
-    width: 50%;
+    width: 75%;
+}
+
+#chat_container {
+    height: 100%;
+    width: 25%;
     display: flex;
 }
 
