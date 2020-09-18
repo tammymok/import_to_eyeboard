@@ -90,3 +90,8 @@ io.on('connection', (socket) => {
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
+
+// Testing for the Waldo game
+app.get('/waldo', (req, res) => {
+  res.sendFile(__dirname + '/public/waldo.html');
+});
