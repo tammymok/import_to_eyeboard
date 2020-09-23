@@ -31,6 +31,10 @@ function setup() {
 function draw() {
   // Nothing
 }
+function clearCanvas(){
+  clear();
+  background(0);
+}
 
 function mouseDragged() {
   // Draw some white circles
