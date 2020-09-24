@@ -12,13 +12,18 @@
   <body>
     <div id="canvas_container">
       <script type="text/javascript" src="sketch.js"></script>
-      <div>
+      <div id="button_container">
         <button onclick="clearCanvas();"> Clear </button>
         <button onclick="triggerErase();"> Erase! </button>
         <button onclick="triggerDraw();"> Draw! </button>
         <button onclick="increaseSize();"> + </button>
         <button onclick="decreaseSize();"> - </button>
       </div>
+
+      <div>    
+        <label id= "currentcolor">Color</label>
+        <input type="color" id = "currentcolor" value="#FFFFFF">
+       </div>
     </div>
 
     <div id="chat_container">

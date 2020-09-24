@@ -6,6 +6,9 @@
 var socket = io();
 var size = 10;
 var eraseOn = false;
+var myColor = '#ffffff';
+//var myColor = document.getElementById("currentcolor").value; 
+//myColor.setAttribute("type", "color");
 cleared = false;
 function setup() {
   cnv = createCanvas(600, 600);
@@ -22,10 +25,9 @@ function setup() {
     // When we receive data
     function(data) {
       console.log("Got: " + data.x + " " + data.y + " " + data.px + " " + data.py+" ", data.clear);
-      // Draw a blue circle
       if(data.eraser){
         stroke(0);
-      }else{stroke(0, 0, 255);}
+      } else { stroke(0, 0, 255); }
       if(data.clear){
         clear();
         background(0);
@@ -43,6 +45,7 @@ function triggerDraw() {
   eraseOn = false;
 }
 function clearCanvas(){
+  //pop up alert
   if(confirm("This will clear everyone's screen! Do you want to proceed?")){
     clear();
     background(0);
@@ -51,7 +54,9 @@ function clearCanvas(){
   //placeholder, real purpose is just to send cleared and tell everyone else to clear their canvas
   sendmouse(0,0,0,0)
 }
+function changeColor(){
 
+}
 function increaseSize(){
   if (size < 100){size += 5;}
 }
@@ -64,12 +69,11 @@ function triggerErase(){
   eraseOn = true;
 }
 function mouseDragged() {
-  // Draw some white circles
-  console.log("mouseDragged");
   if (eraseOn){
     stroke(0);
   }else{ 
-    stroke(255);
+    console.log(myColor);
+    stroke(myColor);
   }
   strokeWeight(size);
   line(mouseX, mouseY, pmouseX, pmouseY);
