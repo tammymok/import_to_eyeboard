@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>EyeBoard!👀(☉｡☉)!</title>
+    <link rel="stylesheet" type="text/css" href="game_style.css">
+    <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.1.4/lib/p5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.1.4/lib/addons/p5.sound.min.js"></script>
+  </head>
+  <body>
+    <div id="info_container">
+      
+    </div>
+
+    <div id="canvas_container">
+      <script type="text/javascript" src="sketch.js"></script>
+      <div id="button_container">
+        <button onclick="clearCanvas();"> Clear </button>
+        <button onclick="triggerErase();"> Erase! </button>
+        <button onclick="triggerDraw();"> Draw! </button>
+        <button onclick="increaseSize();"> + </button>
+        <button onclick="decreaseSize();"> - </button>
+      </div>
+
+      <div>    
+        <label id= "currentcolor">Color</label>
+        <input type="color" id = "currentcolor" value="#FFFFFF">
+       </div>
+    </div>
+
+    <div id="chat_container">
+      <div id="chatbox">
+        <div id="messages-div">
+          <ul id="messages"></ul>
+        </div>
+        <form action="">
+          <input id="m" autocomplete="on" /><button>></button>
+        </form>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="./chat.js"></script>
+      </div>
+      
+    </div>
+
+    
+    <!--div id="container">
+      <span id="chatbox">
+
+        <script src='main.js'></script>
+
+        <div id="messages-div">
+          <ul id="messages"></ul>
+        </div>
+
+        <form action="">
+          <input id="m" autocomplete="on" /><button>></button>
+        </form>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="./chat.js"></script>
+
+      </span>
+    </div-->
+
+
+  </body>
+</html>

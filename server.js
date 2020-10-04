@@ -19,8 +19,8 @@ function listen() {
   console.log('Example app listening at http://' + host + ':' + port);
 }
 
+// Make all files in public public
 app.use(express.static('public'));
-
 
 // WebSocket Portion
 // WebSockets work with the HTTP server
@@ -61,10 +61,6 @@ var cookie = {
   index: 0
 };
 
-// io = server
-// socket = client(s)
-
-
 // Handle connections (on first connection)
 io.on('connection', (socket) => {
   console.log('Client connected');
@@ -87,9 +83,20 @@ io.on('connection', (socket) => {
 //setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
 
 // Display static HTML page (hopefully including JS)
+// Route for the homepage
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(__dirname + '/public/homepage.html');
 });
+
+// Display the whiteboard page
+app.get('/whiteboard', (req, res) => {
+  res.sendFile(__dirname + '/public/whiteboard.html');
+});
+
+// Display the game page
+app.get('/game', (req, res) => {
+  res.sendFile(__dirname + '/public/game.html');
+})
 
 // Testing for the Waldo game
 app.get('/waldo', (req, res) => {

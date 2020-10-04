@@ -12,9 +12,15 @@ body {
     display: flex;
 }
 
+#info_container{
+    height: 100%;
+    width: 25%;
+    background-color: #000;
+}
+
 #canvas_container {
     height: 100%;
-    width: 75%;
+    width: 50%;
 }
 
 #chat_container {
