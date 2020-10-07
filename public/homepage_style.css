@@ -11,18 +11,26 @@ body {
     margin: 0;
     border: 0;
 }
+.homepage_icon{
+    height: auto;
+    width: 75%;
+    opacity: 1;
+    display:block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
 
 #whiteboard {
     width: 50%;
     height: 100%;
-    background-color: aqua;
+    background-color: #fff;
     text-align: center;
 }
 
 #game {
     width: 50%;
     height: 100%;
-    background-color: burlywood;
+    background-color: #fff;
     text-align: center;
 }
 
@@ -33,6 +41,9 @@ body {
     justify-content: center;
 }
 
+#button_container:hover .homepage_icon{
+    opacity: 0.3;
+}
 button {
     font: inherit;
     width: 250px;
