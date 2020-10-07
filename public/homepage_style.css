@@ -40,9 +40,23 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+#fullscreen_button_container {
+    position: absolute;
+    height: 5%;
+    width: 3%;
+    display: block;
+    opacity: 0.6;
+    top:20px;
+    right:20px;
+    background-color: white;
+}
+#fullscreen_button_container:hover .homepage_icon{
+    opacity:0.4;
+    cursor: pointer;
+}
 #button_container:hover .homepage_icon{
     opacity: 0.3;
+    cursor: pointer;
 }
 button {
     font: inherit;
